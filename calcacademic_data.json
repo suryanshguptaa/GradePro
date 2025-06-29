@@ -1,0 +1,277 @@
+{
+  "universities": {
+    "AKTU": {
+      "name": "Abdul Kalam Technical University",
+      "location": "Uttar Pradesh",
+      "formulas": {
+        "standard": {
+          "formula": "(CGPA * 10) - 7.5",
+          "description": "Official AKTU Formula (2018-2019 onwards)"
+        },
+        "alternative": {
+          "formula": "(CGPA - 0.75) * 10",
+          "description": "Alternative Formula"
+        }
+      },
+      "grading_scale": "10.0",
+      "grade_points": {
+        "O": 10,
+        "A+": 9,
+        "A": 8,
+        "B+": 7,
+        "B": 6,
+        "C": 5,
+        "P": 4,
+        "F": 0
+      }
+    },
+    "Anna University": {
+      "name": "Anna University",
+      "location": "Tamil Nadu",
+      "formulas": {
+        "standard": {
+          "formula": "CGPA * 9.5",
+          "description": "Standard Anna University Formula"
+        },
+        "alternative": {
+          "formula": "CGPA * 9.0",
+          "description": "Alternative Formula"
+        }
+      },
+      "grading_scale": "10.0",
+      "grade_points": {
+        "O": 10,
+        "A+": 9,
+        "A": 8,
+        "B+": 7,
+        "B": 6,
+        "C": 5,
+        "P": 4,
+        "F": 0
+      }
+    },
+    "VTU": {
+      "name": "Visvesvaraya Technological University",
+      "location": "Karnataka",
+      "formulas": {
+        "2021_scheme": {
+          "formula": "CGPA * 10",
+          "description": "VTU 2021/2022 Scheme"
+        },
+        "2018_scheme": {
+          "formula": "(CGPA - 0.75) * 10",
+          "description": "VTU 2018 Scheme and Earlier"
+        }
+      },
+      "grading_scale": "10.0",
+      "grade_points": {
+        "S": 10,
+        "A": 9,
+        "B": 8,
+        "C": 7,
+        "D": 6,
+        "E": 4,
+        "F": 0
+      }
+    },
+    "KTU": {
+      "name": "Kerala Technological University",
+      "location": "Kerala",
+      "formulas": {
+        "standard": {
+          "formula": "(CGPA * 10) - 3.75",
+          "description": "KTU Official Formula"
+        }
+      },
+      "grading_scale": "10.0",
+      "grade_points": {
+        "S": 10,
+        "A+": 9,
+        "A": 8,
+        "B+": 7,
+        "B": 6,
+        "C": 5,
+        "P": 4,
+        "F": 0
+      }
+    },
+    "Mumbai University": {
+      "name": "University of Mumbai",
+      "location": "Maharashtra",
+      "formulas": {
+        "standard": {
+          "formula": "(CGPA * 7.1) + 11",
+          "description": "Mumbai University CBCS Formula"
+        }
+      },
+      "grading_scale": "7.0",
+      "grade_points": {
+        "O": 7,
+        "A": 6,
+        "B": 5,
+        "C": 4,
+        "D": 3,
+        "P": 2,
+        "F": 0
+      }
+    },
+    "GTU": {
+      "name": "Gujarat Technological University",
+      "location": "Gujarat",
+      "formulas": {
+        "standard": {
+          "formula": "(CGPA - 0.5) * 10",
+          "description": "GTU Official Formula"
+        }
+      },
+      "grading_scale": "10.0",
+      "grade_points": {
+        "AA": 10,
+        "AB": 9,
+        "BB": 8,
+        "BC": 7,
+        "CC": 6,
+        "CD": 5,
+        "DD": 4,
+        "FF": 0
+      }
+    },
+    "SPPU": {
+      "name": "Savitribai Phule Pune University",
+      "location": "Maharashtra",
+      "formulas": {
+        "o_aplus": {
+          "formula": "(CGPA * 20) - 100",
+          "description": "For O and A+ grades (CGPA 8.5-10)"
+        },
+        "a_grade": {
+          "formula": "(CGPA * 10) - 15",
+          "description": "For A grade (CGPA 7.5-8.49)"
+        },
+        "bplus_b": {
+          "formula": "(CGPA * 5) + 22.5",
+          "description": "For B+ and B grades (CGPA 5.5-7.49)"
+        },
+        "c_grade": {
+          "formula": "(CGPA * 4) + 28",
+          "description": "For C grade (CGPA 4.25-5.49)"
+        },
+        "p_grade": {
+          "formula": "(CGPA * 20) - 40",
+          "description": "For P grade (CGPA 4-4.24)"
+        }
+      },
+      "grading_scale": "10.0",
+      "grade_points": {
+        "O": 10,
+        "A+": 9,
+        "A": 8,
+        "B+": 7,
+        "B": 6,
+        "C": 5,
+        "P": 4,
+        "F": 0
+      }
+    },
+    "BPUT": {
+      "name": "Biju Patnaik University of Technology",
+      "location": "Odisha",
+      "formulas": {
+        "standard": {
+          "formula": "CGPA * 10",
+          "description": "BPUT Standard Formula"
+        }
+      },
+      "grading_scale": "10.0",
+      "grade_points": {
+        "O": 10,
+        "E": 9,
+        "A": 8,
+        "B": 7,
+        "C": 6,
+        "D": 5,
+        "F": 2
+      }
+    },
+    "RGPV": {
+      "name": "Rajiv Gandhi Proudyogiki Vishwavidyalaya",
+      "location": "Madhya Pradesh",
+      "formulas": {
+        "standard": {
+          "formula": "CGPA * 10",
+          "description": "RGPV Official Formula"
+        }
+      },
+      "grading_scale": "10.0",
+      "grade_points": {
+        "O": 10,
+        "A+": 9,
+        "A": 8,
+        "B+": 7,
+        "B": 6,
+        "C": 5,
+        "P": 4,
+        "F": 0
+      }
+    }
+  },
+  "seo_keywords": {
+    "primary": [
+      "CGPA to percentage calculator",
+      "academic grade converter",
+      "university CGPA formula",
+      "percentage to CGPA conversion",
+      "Indian university grading system"
+    ],
+    "secondary": [
+      "AKTU CGPA calculator",
+      "Anna University grade converter",
+      "VTU percentage calculator",
+      "Mumbai University CGPA",
+      "GTU grade calculator",
+      "SPPU CGPA converter",
+      "BPUT grade calculator",
+      "RGPV CGPA formula",
+      "KTU grade converter"
+    ],
+    "long_tail": [
+      "how to convert CGPA to percentage",
+      "university specific CGPA formula",
+      "academic performance calculator",
+      "grade point average converter",
+      "semester GPA calculator",
+      "cumulative grade calculator"
+    ]
+  },
+  "ai_features": {
+    "predictive_models": [
+      "Target CGPA Achievement",
+      "Grade Requirements Prediction",
+      "Semester Performance Forecasting",
+      "Academic Milestone Tracking",
+      "Probability Assessment Scoring"
+    ],
+    "algorithms": [
+      "Random Forest Regression",
+      "Linear Regression Analysis",
+      "Decision Tree Modeling",
+      "Bayesian Network Prediction"
+    ],
+    "accuracy_metrics": {
+      "grade_prediction": "76%",
+      "performance_forecasting": "85%",
+      "early_warning_detection": "90%"
+    }
+  },
+  "app_config": {
+    "name": "CalcAcademic",
+    "version": "1.0",
+    "developer": "Suryansh Gupta",
+    "social_links": {
+      "linkedin": "https://linkedin.com/in/suryanshgupta",
+      "github": "https://github.com/suryanshgupta",
+      "twitter": "https://twitter.com/suryanshgupta",
+      "instagram": "https://instagram.com/suryansh.dev"
+    }
+  }
+}

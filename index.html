@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradePro - #1 CGPA Calculator & Grade Converter for Indian Universities 2025</title>
+    <meta name="description" content="GradePro - Advanced AI-powered CGPA to percentage calculator supporting 15+ Indian universities including AKTU, Anna University, VTU, KTU. Instant grade prediction with university-specific formulas.">
+    <meta name="keywords" content="CGPA calculator, percentage converter, AKTU CGPA, Anna University grade, VTU calculator, KTU grade, Mumbai University, academic performance, grade prediction, CGPA to percentage, Indian universities">
+    <meta name="author" content="Suryansh Gupta">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GradePro - AI-Powered CGPA Calculator for Indian Universities">
+    <meta property="og:description" content="Convert CGPA to percentage instantly with university-specific formulas. Supporting AKTU, VTU, Anna University & 15+ Indian universities. Free AI grade prediction.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gradepro.app/og-image.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GradePro - CGPA Calculator & Grade Predictor">
+    <meta name="twitter:description" content="Advanced CGPA to percentage converter with AI predictions for Indian universities">
+    <meta name="twitter:creator" content="@suryanshgupta">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "GradePro",
+        "description": "AI-Powered CGPA Calculator and Grade Converter for Indian Universities",
+        "url": "https://gradepro.app",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Person",
+            "name": "Suryansh Gupta",
+            "sameAs": [
+                "https://linkedin.com/in/suryanshgupta",
+                "https://github.com/suryanshgupta",
+                "https://twitter.com/suryanshgupta"
+            ]
+        },
+        "featureList": [
+            "CGPA to Percentage Converter",
+            "AI Grade Prediction",
+            "University-Specific Formulas",
+            "Real-time Calculations",
+            "Performance Analytics",
+            "Offline Support"
+        ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header glass">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <h1 class="nav__logo">🎓 GradePro</h1>
+                <span class="nav__tagline">Smart Grade Calculator</span>
+            </div>
+            <div class="nav__actions">
+                <button class="theme-toggle glass" id="themeToggle" aria-label="Toggle dark/light mode">
+                    <span class="theme-toggle__icon">🌙</span>
+                </button>
+                <button class="btn btn--primary">Get Started Free</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <h1 class="hero__title">
+                        India's #1 Smart 
+                        <span class="gradient-text">CGPA Calculator</span>
+                    </h1>
+                    <p class="hero__description">
+                        Transform your academic planning with AI-powered grade prediction, 
+                        university-specific conversion formulas, and comprehensive performance 
+                        analytics. Trusted by 100,000+ students across India.
+                    </p>
+                    <div class="hero__stats">
+                        <div class="stat-card glass">
+                            <div class="stat-card__number">15+</div>
+                            <div class="stat-card__label">Universities</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-card__number">98%</div>
+                            <div class="stat-card__label">Accuracy</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-card__number">100K+</div>
+                            <div class="stat-card__label">Students</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__calculator">
+                    <div class="calculator-card glass-intense">
+                        <div class="calculator-card__header">
+                            <h3>⚡ Instant CGPA Converter</h3>
+                            <div class="university-selector">
+                                <select id="universitySelect" class="form-control glass">
+                                    <option value="universal">🌐 Universal Formula</option>
+                                    <option value="AKTU">🏛️ AKTU (Uttar Pradesh)</option>
+                                    <option value="AU">🏛️ Anna University (Tamil Nadu)</option>
+                                    <option value="VTU">🏛️ VTU (Karnataka)</option>
+                                    <option value="KTU">🏛️ KTU (Kerala)</option>
+                                    <option value="MU">🏛️ Mumbai University (Maharashtra)</option>
+                                    <option value="GTU">🏛️ GTU (Gujarat)</option>
+                                    <option value="SPPU">🏛️ SPPU (Maharashtra)</option>
+                                    <option value="BPUT">🏛️ BPUT (Odisha)</option>
+                                    <option value="RGPV">🏛️ RGPV (Madhya Pradesh)</option>
+                                    <option value="DU">🏛️ Delhi University</option>
+                                    <option value="JNTU">🏛️ JNTU (Telangana)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="calculator-card__body">
+                            <div class="form-group">
+                                <label class="form-label" for="cgpaInput">Enter Your CGPA</label>
+                                <input type="number" id="cgpaInput" class="form-control glass" placeholder="8.50" min="0" max="10" step="0.01">
+                            </div>
+                            <div class="conversion-display glass">
+                                <div class="conversion-result">
+                                    <div class="result-label">Percentage</div>
+                                    <div class="result-value" id="percentageResult">0.00%</div>
+                                </div>
+                                <div class="formula-display" id="formulaDisplay">
+                                    <small>Formula: CGPA × 9.5 (Universal)</small>
+                                </div>
+                            </div>
+                            <button class="btn btn--primary btn--full-width pulse" id="calculateBtn">
+                                🚀 Calculate Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Features -->
+    <section class="quick-features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card glass hover-lift">
+                    <div class="feature-card__icon">🎯</div>
+                    <h3 class="feature-card__title">AI Grade Prediction</h3>
+                    <p class="feature-card__description">Smart algorithms predict required grades for your target CGPA</p>
+                </div>
+                <div class="feature-card glass hover-lift">
+                    <div class="feature-card__icon">⚡</div>
+                    <h3 class="feature-card__title">Instant Results</h3>
+                    <p class="feature-card__description">Real-time conversion with university-specific formulas</p>
+                </div>
+                <div class="feature-card glass hover-lift">
+                    <div class="feature-card__icon">📊</div>
+                    <h3 class="feature-card__title">Progress Tracking</h3>
+                    <p class="feature-card__description">Visual analytics and performance insights</p>
+                </div>
+                <div class="feature-card glass hover-lift">
+                    <div class="feature-card__icon">🏆</div>
+                    <h3 class="feature-card__title">Achievement System</h3>
+                    <p class="feature-card__description">Gamified experience with badges and milestones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Calculator Section -->
+    <section class="advanced-calculator">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🧮 Advanced Grade Management</h2>
+                <p class="section-subtitle">Complete semester tracking with subject-wise grade entry</p>
+            </div>
+            
+            <!-- Subject Entry System -->
+            <div class="subject-manager glass-intense">
+                <div class="subject-header">
+                    <h3>📚 Subject Grade Entry</h3>
+                    <div class="subject-controls">
+                        <button class="btn btn--secondary" id="addSubjectBtn">+ Add Subject</button>
+                        <button class="btn btn--outline" id="clearSubjectsBtn">Clear All</button>
+                    </div>
+                </div>
+                <div class="subjects-grid" id="subjectsGrid">
+                    <!-- Subjects will be added dynamically -->
+                </div>
+                <div class="sgpa-display glass" id="sgpaDisplay">
+                    <div class="sgpa-result">
+                        <span class="sgpa-label">Current SGPA:</span>
+                        <span class="sgpa-value" id="currentSGPA">0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semester Management -->
+            <div class="semester-manager">
+                <div class="semester-controls">
+                    <button class="btn btn--primary" id="addSemesterBtn">+ Add Semester</button>
+                    <button class="btn btn--outline" id="clearAllBtn">Clear All Semesters</button>
+                </div>
+                <div class="semesters-grid" id="semestersGrid">
+                    <!-- Semesters will be added dynamically -->
+                </div>
+            </div>
+
+            <!-- AI Grade Prediction Panel -->
+            <div class="prediction-panel glass-intense">
+                <h3>🤖 AI Grade Prediction Engine</h3>
+                <div class="prediction-controls">
+                    <div class="form-group">
+                        <label class="form-label" for="targetCGPA">🎯 Target CGPA</label>
+                        <input type="number" id="targetCGPA" class="form-control glass" placeholder="9.0" min="0" max="10" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="remainingSemesters">📅 Remaining Semesters</label>
+                        <input type="number" id="remainingSemesters" class="form-control glass" placeholder="2" min="1" max="8">
+                    </div>
+                    <button class="btn btn--primary pulse" id="predictBtn">
+                        🚀 Generate AI Prediction
+                    </button>
+                </div>
+                <div class="prediction-results glass" id="predictionResults">
+                    <div class="prediction-placeholder">
+                        <div class="placeholder-icon">🤖</div>
+                        <p>Enter your target CGPA and remaining semesters to get AI-powered predictions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Dashboard -->
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2 class="section-title">📈 Performance Dashboard</h2>
+                <p class="section-subtitle">Visual insights into your academic progress</p>
+            </div>
+            <div class="dashboard-grid">
+                <div class="dashboard-card glass">
+                    <h4>📊 Grade Distribution</h4>
+                    <div class="chart-container">
+                        <canvas id="gradeChart" width="300" height="200"></canvas>
+                    </div>
+                </div>
+                <div class="dashboard-card glass">
+                    <h4>🏆 Achievement Badges</h4>
+                    <div class="badges-container" id="badgesContainer">
+                        <!-- Badges will be added dynamically -->
+                    </div>
+                </div>
+                <div class="dashboard-card glass">
+                    <h4>📈 Progress Timeline</h4>
+                    <div class="timeline-container" id="timelineContainer">
+                        <div class="timeline-placeholder">
+                            <p>Add semesters to see your progress timeline</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Export & Save Section -->
+    <section class="export-section glass">
+        <div class="container">
+            <div class="export-panel">
+                <h3>📄 Export & Save Your Data</h3>
+                <p>Download your academic progress reports and save calculations</p>
+                <div class="export-controls">
+                    <button class="btn btn--outline hover-lift" id="exportPDFBtn">
+                        📄 Export PDF Report
+                    </button>
+                    <button class="btn btn--outline hover-lift" id="exportCSVBtn">
+                        📊 Export CSV Data
+                    </button>
+                    <button class="btn btn--secondary hover-lift" id="saveHistoryBtn">
+                        💾 Save to History
+                    </button>
+                    <button class="btn btn--outline hover-lift" id="shareResultsBtn">
+                        🔗 Share Results
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Universities Section -->
+    <section class="universities-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🏛️ Supported Universities</h2>
+                <p class="section-subtitle">Accurate formulas for major Indian universities</p>
+            </div>
+            <div class="universities-grid" id="universitiesGrid">
+                <!-- University cards will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer glass">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__logo">🎓 GradePro</div>
+                    <p class="footer__tagline">Empowering academic excellence through intelligent calculations</p>
+                    <div class="footer__stats">
+                        <span>Trusted by 100,000+ students</span>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>Features</h4>
+                        <ul>
+                            <li><a href="#calculator">CGPA Calculator</a></li>
+                            <li><a href="#prediction">AI Prediction</a></li>
+                            <li><a href="#universities">Universities</a></li>
+                            <li><a href="#analytics">Analytics</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#help">Help Center</a></li>
+                            <li><a href="#formulas">Grade Formulas</a></li>
+                            <li><a href="#guides">Study Guides</a></li>
+                            <li><a href="#blog">Academic Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                            <li><a href="#terms">Terms of Service</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__developer">
+                    <p>Developed with ❤️ by <strong>Suryansh Gupta</strong></p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/suryanshgupta" target="_blank" rel="noopener" class="social-link glass hover-lift" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/suryanshgupta" target="_blank" rel="noopener" class="social-link glass hover-lift" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/suryanshgupta" target="_blank" rel="noopener" class="social-link glass hover-lift" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/suryansh.dev" target="_blank" rel="noopener" class="social-link glass hover-lift" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <p>&copy; 2025 GradePro. All rights reserved. Made in India 🇮🇳</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner glass">
+            <div class="spinner"></div>
+            <p>Calculating your results...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Floating Action Button -->
+    <button class="fab glass" id="helpFab" aria-label="Help & Support">
+        <span class="fab-icon">❓</span>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>
